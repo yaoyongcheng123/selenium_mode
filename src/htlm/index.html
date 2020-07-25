@@ -1,0 +1,78 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <title>我的第一个 HTML 页面</title>
+</head>
+
+<body>
+<p>body 元素的内容会显示在浏览器中。</p>
+<a href="index2.html">你点我呀</a>
+<br></br>
+<input id="a" ></input><br/>
+<button onclick="f()">点我</button><br/>
+<button onclick="f1()">跳转</button><br/>
+<button onclick="f2()">确认/取消</button><br/>
+<button onclick="f3()">输入</button><br/>
+<select id="sel">
+    <option value ="volvo">Volvo</option>
+    <option value ="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+</select><br/>
+<form action="" method="get">
+    您喜欢的水果？<br /><br />
+    <label><input name="Fruit" type="checkbox" value="苹果" />苹果 </label>
+    <label><input name="Fruit" type="checkbox" value="桃子" />桃子 </label>
+    <label><input name="Fruit" type="checkbox" value="香蕉" />香蕉 </label>
+    <label><input name="Fruit" type="checkbox" value="梨" />梨 </label><br/>
+    <input id="btnOperate" type="button" value="选择" onclick="static_num()" />
+</form><br/>
+<form action="" method="get">
+    您最喜欢水果？<br /><br />
+    <label><input name="Fruit" type="radio" value="" />苹果 </label>
+    <label><input name="Fruit" type="radio" value="" />桃子 </label>
+    <label><input name="Fruit" type="radio" value="" />香蕉 </label>
+    <label><input name="Fruit" type="radio" value="" />梨 </label>
+    <label><input name="Fruit" type="radio" value="" />其它 </label>
+</form><br/>
+
+</body>
+<iframe width="80%" height="600" src="index2.html" frameborder="1"
+        allowtransparency="true"  style="margin-top:5px;">
+
+</iframe>
+
+</html>
+
+
+<script>
+    // window.onload = f;
+    function f() {
+        alert("aaa");
+    }
+    function f1() {
+        window.open("http://www.baidu.com", "_blank");
+    }
+
+    function f2() {
+        confirm("哈哈");
+    }
+
+    function f3() {
+       prompt("呵呵");
+    }
+
+    function static_num() {
+        var items = document.getElementsByName("Fruit");
+        var arr = new Array();
+        var str = "";
+        for (var i = 0; i < items.length; i++) {
+            if (items[i].checked) {
+                arr.push(items[i].value);
+                str = str+items[i].value+"  ";
+            }
+        }
+        // alert("选择的个数为：" + arr.length);
+        alert("选择的个数为：" + arr.length+";  分别为："+str);
+    }
+</script>
