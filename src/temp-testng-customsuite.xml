@@ -3,7 +3,7 @@
 <suite name="Default Suite" parallel="methods">
   <test name="WebDriver_demo">
     <classes>
-      <class name="seleniumGrid.HubTest" >
+      <class name="Test" >
       </class> <!-- seleniumGrid.HubTest -->
     </classes>
   </test> <!-- WebDriver_demo -->
